@@ -18,7 +18,7 @@
     "printWidth": 100
   },
   "engines": {
-    "node": ">=18.x"
+    "node": ">=24.x"
   },
   "dependencies": {
     "@types/cheerio": "^0.22.31",
@@ -34,7 +34,7 @@
     "eslint-config-prettier": "^8.7.0",
     "highlight.js": "^11.7.0",
     "microcms-js-sdk": "^2.3.2",
-    "next": "^13.4.4",
+    "next": "^16.0.5",
     "prettier": "^2.8.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
