@@ -8,10 +8,16 @@ import styles from './layout.module.css';
 
 export const metadata = {
   metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
-  title: '透湖とねことITと',
+  title: { 
+    template: '%s | 透湖とねことITと',
+    default: '透湖とねことITと'
+  },
   description: '雑多にいろんなことを書くブログ Presented by microCMS',
   openGraph: {
-    title: 'Simple Blog',
+    title: { 
+    template: '%s | 透湖とねことITと',
+    default: '透湖とねことITと'
+  },
     description: '雑多にいろんなことを書くブログ Presented by microCMS',
     images: '/ogp.png',
   },
