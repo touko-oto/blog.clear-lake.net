@@ -22,7 +22,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       title: '「' + searchParams.q + '」の検索結果',
     },
     alternates: {
-      canonical: `/search/p/${params.current}?q=${searchParams.q}`,
+      canonical: `/search/p/${params.current}?q=${encodeURIComponent(searchParams.q ?? '')}`,
     },
   };
 }
