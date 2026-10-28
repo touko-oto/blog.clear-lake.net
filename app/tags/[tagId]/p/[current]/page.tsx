@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getList, getTag } from '@/libs/microcms';
+import { getList, getTag, tagFilter } from '@/libs/microcms';
 import { LIMIT } from '@/constants';
 import Pagination from '@/components/Pagination';
 import ArticleList from '@/components/ArticleList';
@@ -34,7 +34,7 @@ export default async function Page(props: Props) {
   const data = await getList({
     limit: LIMIT,
     offset: LIMIT * (current - 1),
-    filters: `tags[contains]${tagId}`,
+    filters: tagFilter(tagId),
   });
   return (
     <>

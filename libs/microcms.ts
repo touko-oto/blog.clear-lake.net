@@ -95,3 +95,11 @@ export const getTag = async (contentId: string, queries?: MicroCMSQueries) => {
 
   return detailData;
 };
+
+// タグIDで記事を絞り込むフィルタを作成（不正なIDはフィルタ構文の注入を防ぐため404にする）
+export const tagFilter = (tagId: string) => {
+  if (!/^[A-Za-z0-9_-]+$/.test(tagId)) {
+    notFound();
+  }
+  return `tags[contains]${tagId}`;
+};

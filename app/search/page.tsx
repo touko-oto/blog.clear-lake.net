@@ -17,7 +17,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       title: '「' + searchParams.q + '」の検索結果',
     },
     alternates: {
-      canonical: `/search?q=${searchParams.q}`,
+      canonical: `/search?q=${encodeURIComponent(searchParams.q ?? '')}`,
     },
   };
 }
